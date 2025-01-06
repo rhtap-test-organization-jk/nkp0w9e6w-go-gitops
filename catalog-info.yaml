@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: nkp0w9e6w-go-gitops
+  description: This is GitOps manifest for nkp0w9e6w-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: nkp0w9e6w-go
+    backstage.io/kubernetes-id: nkp0w9e6w-go 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: rhtap-test-organization-jk/nkp0w9e6w-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:nkp0w9e6w-go
